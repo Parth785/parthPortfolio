@@ -55,6 +55,108 @@ body {
     margin: 10px 0;
 }
 
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .hero {
+        height: auto;
+        padding: 80px 20px;
+        text-align: center;
+        overflow: hidden; /* Prevents image from overflowing */
+    }
+
+    .container {
+        flex-direction: column-reverse; /* Keeps text above image */
+        gap: 40px;
+    }
+
+    .hero-content {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero-img img {
+        width: 80%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2; /* Keeps it above other sections */
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 600px) {
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-img img {
+        width: 65%;
+        max-width: 220px;
+    }
+}
+
+/* Fix for Image Overflowing into About Section */
+.about {
+    position: relative;
+    z-index: 1; /* Ensures About section doesn't get overlapped */
+    padding-top: 50px;
+}
+
+/* Desktop Fix - Keeping Layout Intact */
+@media (min-width: 1025px) {
+    .hero {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container {
+        flex-direction: row;
+        gap: 50px;
+    }
+
+
+    .stats {
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .hero-img img {
+        max-width: 250px;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+
+
 /* Stats Section */
 .stats {
     display: flex;
