@@ -754,14 +754,14 @@ html {
     margin-bottom: 20px;
 }
 
-.tech-stack {
+.tech-stack1 {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
     margin-bottom: 20px;
 }
 
-.tech-stack span {
+.tech-stack1 span {
     font-size: 1rem;
     color: #ff6b00; /* Gold */
     padding: 5px 10px;
