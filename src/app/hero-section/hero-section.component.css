@@ -1,0 +1,435 @@
+/* Body background */
+body {
+    background-color: #f0f4f7; /* Light background */
+    color: #333; /* Dark text for readability */
+    font-family: 'Poppins', sans-serif; /* Uniform font */
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, #0e161b, #1b2833);
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height:60px;
+  }
+  
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .navbar-brand {
+    font-size: 1.8rem;
+    color: #f4a261; /* Gold */
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .navbar-links li {
+    display: inline;
+  }
+  
+  .navbar-links a {
+    left:50%;
+    color: #f39c12; /* Light Grayish White */
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    color: #f4a261; /* Hover color Gold */
+    transform: translateY(-3px);
+  }
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+      background: linear-gradient(to right, #0e161b, #1b2833);
+    color: white;
+    padding: 20px;
+    position: relative;
+    border-bottom: 3px solid #ffffff; /* Adds a sharp break */
+}
+
+/* Container for hero section */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+    gap: 50px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 1s forwards;
+}
+
+/* Hero content styling */
+.hero-content {
+    flex: 1;
+    text-align: center;
+    min-width: 300px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero .highlight {
+    color: #f39c12; /* Highlight color */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .hero {
+        height: auto;
+        padding: 80px 20px;
+        text-align: center;
+        overflow: hidden; /* Prevents image from overflowing */
+    }
+
+    .container {
+        flex-direction: column-reverse; /* Keeps text above image */
+        gap: 40px;
+    }
+
+    .hero-content {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero-img img {
+        width: 80%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2; /* Keeps it above other sections */
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 600px) {
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-img img {
+        width: 65%;
+        max-width: 220px;
+    }
+}
+
+/* Fix for Image Overflowing into About Section */
+.about {
+    position: relative;
+    z-index: 1; /* Ensures About section doesn't get overlapped */
+    padding-top: 50px;
+}
+
+/* Desktop Fix - Keeping Layout Intact */
+@media (min-width: 1025px) {
+    .hero {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container {
+        flex-direction: row;
+        gap: 50px;
+    }
+
+
+    .stats {
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .hero-img img {
+        max-width: 250px;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+
+
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.stat {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.stat:hover {
+    transform: scale(1.1);
+}
+
+.stat h3 {
+    font-size: 2rem;
+    color: #f39c12; /* Highlight color */
+    font-weight: bold;
+}
+
+.stat p {
+    font-size: 1rem;
+}
+
+/* Social icons styling */
+.social-icons {
+    margin: 15px 0;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.8rem;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #f39c12; /* Highlight color */
+    transform: scale(1.2);
+}
+
+/* Button styling */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #f39c12;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #e67e22;
+}
+
+/* Hero Image styling */
+.hero-img {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-img img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .hero-img img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Keyframe for fade-in effect */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* About section */
+/* About Section */
+.about {
+    background: linear-gradient(to right, #0e161b, #1b2833);
+    padding: 70px 20px;
+    text-align: center;
+    color: white;
+    border-bottom: 3px solid #ffffff;
+}
+
+.about h2 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #f39c12;
+    margin-bottom: 30px;
+}
+
+/* About Content */
+.about-content {
+    max-width: 900px;
+    margin: auto;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Highlighted Text */
+.about-content span {
+    color: #f39c12;
+    font-weight: bold;
+}
+
+/* Bullet Points (Optional) */
+.about-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.about-content ul li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.about-content ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #f39c12;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+
+/* Tech Stack Section */
+.tech-stack {
+    margin-top: 30px;
+}
+
+.tech-stack h3 {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.icons {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icons i {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.icons i:hover {
+    color: #f39c12; /* Highlight color */
+}
+
+/* Scroll down indicator styling */
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: white;
+    opacity: 0.7;
+    animation: bounce 1.5s infinite;
+}
+
+@media (max-width: 767px) {
+    .scroll-down {
+      bottom: -44px; /* Adjust for smaller screens */
+      font-size: 1.5rem; /* Make the arrow smaller for mobile */
+      left: 50%;
+    }
+  }
+
+.scroll-down {
+    cursor: pointer;
+    font-size: 2rem;
+    color: #f8fafc;
+    margin-top: 20px;
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+  }
+/* Hide scroll-down for small height */
+@media (max-height: 700px) {
+    .scroll-down {
+        display: none;
+    }
+}
+
+
+  
+  
