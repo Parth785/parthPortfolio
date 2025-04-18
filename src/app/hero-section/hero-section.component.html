@@ -1,19 +1,33 @@
+<!-- Navbar -->
+<nav class="navbar">
+    <!-- <div class="container1"> -->
+        <!-- <a href="#hero" class CodeVerse</a> -->
+        <ul class="navbar-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    <!-- </div> -->
+</nav>
+
 <section class="hero">
     <div class="container">
-        <div class="hero-content">
+        <div class="hero-content" data-aos="fade-up" data-aos-delay="100" data-aos-once="true" data-aos-duration="10000">
             <h1>I'm <span class="highlight">Parth Lakhani</span></h1>
             <p>Java & Angular Developer | Building Scalable Apps</p>
 
             <div #statsContainer class="stats">
-                <div class="stat">
+                <div class="stat"  data-aos-delay="600">
                     <h3 data-target="2">2+</h3>
                     <p>Years Experience</p>
                 </div>
-                <div class="stat">
+                <div class="stat" data-aos-delay="600">
                     <h3 data-target="3">3+</h3>
                     <p>Projects Completed</p>
                 </div>
-                <div class="stat">
+                <div class="stat"  data-aos-delay="100">
                     <h3 data-target="5">5+</h3>
                     <p>Technologies Mastered</p>
                 </div>
@@ -38,33 +52,80 @@
     </div>
 </section>
 <!-- Scroll down indicator -->
-<div class="scroll-down">
+<div class="scroll-down"  (click)="scrollToBottom()">
     <i class="fas fa-chevron-down"></i>
 </div>
 
 <section class="about" id="about">
     <div class="container">
-      <div class="about-content">
-        <h2>About Me</h2>
+      <div class="about-content" data-aos="fade-up">
+        <h2>👋 About Me</h2>
         <p>
-          Hi, I'm Parth Lakhani, a Java and Angular developer passionate about building scalable applications. With over 2 years of experience, I have worked on several projects that involve backend technologies like Spring Boot and frontend frameworks like Angular.
+          I'm <strong>Parth Lakhani</strong>, a passionate developer who thrives at the intersection of <strong>Java</strong> and <strong>Angular</strong>. With 2+ years of experience, I bring scalable solutions to life using <strong>Spring Boot</strong>, <strong>REST APIs</strong>, and clean UI components.
         </p>
-        
+        <div class="about-highlights" data-aos="fade-up">
+            <div class="highlight-item">
+              <i class="fas fa-code"></i>
+              <h4>Clean Code</h4>
+              <p>Structured, optimized, and maintainable backend & frontend logic.</p>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-rocket"></i>
+              <h4>Performance</h4>
+              <p>Boosted API performance by 40%, optimized DB queries & frontend load time.</p>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-users"></i>
+              <h4>Team Player</h4>
+              <p>Conducted code reviews, mentored juniors, and collaborated on large systems.</p>
+            </div>
+          </div>
         <div class="tech-stack">
-          <h3>Technologies I Use</h3>
+          <h3>💻 Technologies I Use</h3>
           <div class="icons">
             <i class="fab fa-java"></i>
             <i class="fab fa-angular"></i>
             <i class="fab fa-git"></i>
+            <i class="fas fa-database"></i> <!-- PostgreSQL -->
             <i class="fab fa-node-js"></i>
           </div>
         </div>
+        <!-- <div class="skills">
+            <h3>My Skill Set</h3>
+            <div class="skill">
+              <p>Java</p>
+              <div class="progress-bar">
+                <div class="progress-fill" style="--fill: 90%"></div>
+              </div>
+            </div>
+          
+            <div class="skill">
+              <p>Angular</p>
+              <div class="progress-bar">
+                <div class="progress-fill" style="--fill: 80%"></div>
+              </div>
+            </div>
+          
+            <div class="skill">
+              <p>Spring Boot</p>
+              <div class="progress-bar">
+                <div class="progress-fill" style="--fill: 85%"></div>
+              </div>
+            </div>
+          
+            <div class="skill">
+              <p>PostgreSQL</p>
+              <div class="progress-bar">
+                <div class="progress-fill" style="--fill: 75%"></div>
+              </div>
+            </div>
+          </div>           -->
       </div>
     </div>
   </section>
   <div class="section-divider"></div>
 
-  <section class="experience" id="experience">
+  <!-- <section class="experience" id="experience">
     <h2>Experience</h2>
     <div class="experience-container">
         
@@ -97,13 +158,66 @@
 
         
     </div>
+</section> -->
+<div class="section-divider"></div>
+<section class="experience" id="experience">
+    <div class="container">
+        <div class="experience-content" data-aos="fade-up">
+            <h2 class="section-title">Experience</h2>
+            <!-- Single Experience -->
+            <div class="experience-item">
+                <h3>BISAG-N</h3>
+                <span class="role">Software Developer :</span>
+                <span class="duration"> Mar 2023 – Present</span>
+                <ul class="responsibilities">
+                    <li> Developed full-stack modules using Angular & Spring Boot.</li>
+                    <li> Improved app performance and reduced load times by 35%.</li>
+                    <li> Collaborated with cross-functional teams to deliver scalable solutions.</li>
+                    <li> Optimized database queries, reducing data retrieval time by 20%.</li>
+                    <li> Developed and integrated RESTful APIs for frontend and backend communication.</li>
+                </ul>
+                <p class="tech-stack"><strong>Tech Stack:</strong> Java, Angular, Spring Boot, PostgreSQL</p>
+            </div>
+        </div>
+    </div>
 </section>
+
+<div class="section-divider"></div>
+<section class="projects" id="projects">
+    <div class="container">
+        <h2 class="section-title">Featured Project</h2>
+        <div class="project-card" data-aos="fade-up">
+            <div class="project-img">
+                <img src="assets/finance-tracker.png" alt="Finance Tracker">
+            </div>
+            <div class="project-info">
+                <h3>Finance Tracker</h3>
+                <p class="project-description">
+                    A full-stack finance tracker application designed to help users manage and analyze their personal finances.
+                    Built using Angular for the frontend and Spring Boot for the backend, this app allows users to track their income, expenses, and savings.
+                </p>
+                <div class="tech-stack">
+                    <span>Spring Boot</span>
+                    <span>PostgreSQL</span>
+                    <span>Java</span>
+                </div>
+                <div class="project-links">
+                    <!-- <a href="https://github.com/your-github/finance-tracker" target="_blank">GitHub</a> -->
+                    <!-- <a href="https://your-live-demo.com" target="_blank">Live Demo</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  
 <div class="section-divider"></div>
 
 <!-- Contact Section -->
-<section id="contact" class="contact">
+<section id="contact" #bottomSection class="contact">
     <div class="contact-container">
-        <div class="contact-content">
+        <div class="contact-content" data-aos="fade-up">
             <h2>Get in Touch</h2>
             <p>If you're looking for a skilled developer or want to discuss a project, feel free to reach out.</p>
 

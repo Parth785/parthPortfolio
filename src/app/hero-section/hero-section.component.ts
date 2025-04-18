@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,ViewChild,ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-hero-section',
@@ -6,6 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./hero-section.component.css']
 })
 export class HeroSectionComponent {
+
+  @ViewChild('bottomSection') bottomSection!: ElementRef;
+
+  scrollToBottom(): void {
+    this.bottomSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  }
+
+
+  
 
   
 }
